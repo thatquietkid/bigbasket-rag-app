@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * shadcn's generated classes (bg-primary, text-muted-foreground, ...) read
+ * these theme tokens. They are mapped to the same soft-UI palette as app.py
+ * so the React frontend and the Streamlit app feel like one product.
+ */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius: 1rem;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "DM Sans", ui-sans-serif, system-ui,
+    sans-serif;
+}
+
+:root {
+  --background: #e0e5ec;
+  --foreground: #3d4852;
+  --card: #e0e5ec;
+  --card-foreground: #3d4852;
+  --popover: #e0e5ec;
+  --popover-foreground: #3d4852;
+  --primary: #6c63ff;
+  --primary-foreground: #ffffff;
+  --secondary: #e0e5ec;
+  --secondary-foreground: #3d4852;
+  --muted: #d5dbe4;
+  --muted-foreground: #6b7280;
+  --accent: #d9dfe8;
+  --accent-foreground: #4f46d6;
+  --destructive: #8a3125;
+  --destructive-foreground: #ffffff;
+  --border: #d5dbe4;
+  --input: #d5dbe4;
+  --ring: #6c63ff;
+
+  /* Soft-UI shadow tokens, mirrored from app.py. */
+  --surface: #e0e5ec;
+  --raised: 9px 9px 16px rgb(163 177 198 / 0.6),
+    -9px -9px 16px rgb(255 255 255 / 0.5);
+  --raised-hover: 12px 12px 20px rgb(163 177 198 / 0.7),
+    -12px -12px 20px rgb(255 255 255 / 0.6);
+  --raised-sm: 5px 5px 10px rgb(163 177 198 / 0.6),
+    -5px -5px 10px rgb(255 255 255 / 0.5);
+  --pressed: inset 6px 6px 10px rgb(163 177 198 / 0.6),
+    inset -6px -6px 10px rgb(255 255 255 / 0.5);
+  --pressed-deep: inset 10px 10px 20px rgb(163 177 198 / 0.7),
+    inset -10px -10px 20px rgb(255 255 255 / 0.6);
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+html {
+  background: var(--surface);
+}
+
+body {
+  background: var(--surface);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+/* Reusable neumorphic surfaces used by the voice experience. */
+@utility neo-raised {
+  background: var(--surface);
+  box-shadow: var(--raised);
+  border: 0;
+}
+
+@utility neo-raised-sm {
+  background: var(--surface);
+  box-shadow: var(--raised-sm);
+  border: 0;
+}
+
+@utility neo-well {
+  background: var(--surface);
+  box-shadow: var(--pressed-deep);
+  border: 0;
+}
+
+@utility neo-inset {
+  background: var(--surface);
+  box-shadow: var(--pressed);
+  border: 0;
+}
+
+@utility text-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.04em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

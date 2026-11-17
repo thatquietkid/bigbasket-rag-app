@@ -1,0 +1,20 @@
+# CPU-only PyTorch: the default Linux torch wheel bundles ~2 GB of GPU libraries
+# that Streamlit Community Cloud can't use; the CPU build is much smaller.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+streamlit>=1.40
+pandas
+numpy
+chromadb
+sentence-transformers
+rank-bm25
+google-genai
+groq>=0.11.0
+langchain-groq
+langchain-core
+websockets
+fastapi>=0.115
+uvicorn[standard]
+
+python-dotenv
+requests

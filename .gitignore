@@ -1,0 +1,18 @@
+# local virtual environment (huge, Mac-specific)
+.venv/
+# vector store is rebuilt automatically on first run
+chroma_db/
+__pycache__/
+.DS_Store
+# never commit API keys
+.streamlit/secrets.toml
+# data
+.env
+logs/
+.freebuff/
+# Generated evaluation output
+evaluation_report.json
+# React voice frontend
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo

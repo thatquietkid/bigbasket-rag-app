@@ -1,0 +1,38 @@
+# Theme: neumorphic Soft UI — one cool-grey surface (#E0E5EC), violet accent.
+# Shadows and radii do the visual work; borders stay invisible.
+# Changes here need an app restart.
+
+[theme]
+base = "light"
+primaryColor = "#6C63FF"
+backgroundColor = "#E0E5EC"
+secondaryBackgroundColor = "#E0E5EC"
+textColor = "#3D4852"
+linkColor = "#4F46D6"
+borderColor = "#E0E5EC"
+baseRadius = "16px"
+buttonRadius = "16px"
+showWidgetBorder = false
+showSidebarBorder = false
+font = "DM Sans:https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+headingFont = "Plus Jakarta Sans:https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+codeFont = "JetBrains Mono:https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+paddingTop = "1rem"
+paddingBottom = "7.5rem"
+
+[theme.sidebar]
+backgroundColor = "#E0E5EC"
+secondaryBackgroundColor = "#E0E5EC"
+textColor = "#3D4852"
+borderColor = "#E0E5EC"
+primaryColor = "#6C63FF"
+linkColor = "#4F46D6"
+paddingTop = "0.75rem"
+paddingBottom = "2rem"
+
+[client]
+toolbarMode = "minimal"
+
+# Serve files in ./static at app/static/... (used for the product photos)
+[server]
+enableStaticServing = true
